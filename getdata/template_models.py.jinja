@@ -1,0 +1,23 @@
+from django.db import models
+from chicagomap.models import Tract, Precinct, Zip, Ward, Neighborhood
+import datetime
+
+# Create your models here.
+
+{% for dataset in datasets %}
+{% for indicator in dataset.indicators %}
+class {{ indicator.name }}(models.Model):
+    domain = models.ForeignKey({{ indicator.domain }}, on_delete=models.CASCADE)
+    friendlyName = models.TextField(default='{{ dataset.friendlyname }}')
+    data = models.IntegerField(default=0)
+    units = models.TextField(default='{{ dataset.units }}')
+    startDate = models.DateField(default=datetime.date.today())
+    endDate = models.DateField(default=datetime.date.today())
+    description = models.TextField(default='{{ dataset.description }}')
+    dataset = models.TextField(default='{{ dataset.name }}')
+    mangle = '{{ dataset.mangle }}'
+    def __str__(self):
+        return self.friendlyName
+
+{% endfor %}
+{% endfor %}
