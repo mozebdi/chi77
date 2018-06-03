@@ -102,13 +102,13 @@
       })
       .catch(error => console.log(error));// eslint-disable-line no-console
 
-      console.log("DICT:")
-      console.log(dict)
+      // console.log("DICT:")
+      // console.log(dict)
 
     var loadCensusTracts = new L.GeoJSON.AJAX("data/censustracts.geojson", {onEachFeature:onEachFeature, style:style});
       // loadCensusTracts.addTo(map);
 
-      console.log("GEOJOSN", loadCensusTracts)
+      // console.log("GEOJOSN", loadCensusTracts)
 
     var neighborhoods = new L.GeoJSON.AJAX("data/neighborhoods.geojson", {onEachFeature:onEachFeature, style:style});
 
@@ -181,6 +181,7 @@
     }
 // change feature.properties.objectid to reflect what you want to measure
     function style(feature) {
+        // console.log("style", feature)
         return {
             fillColor: getColor(feature.properties.commarea_n),
             weight: 2,
@@ -208,13 +209,13 @@
       // console.log(feature)
       if (feature.properties.namelsad10) {
         
-        population = dict[feature.properties.name10];
-        console.log(dict)
-        console.log(feature.properties.namelsad10)
-        console.log("Population from Dict:", dict[feature.properties.name10])
+        // population = dict[feature.properties.name10];
+        // console.log(dict)
+        // console.log(feature.properties.namelsad10)
+        // console.log("Population from Dict:", dict[feature.properties.name10])
 
         output = "<dl>" + feature.properties.namelsad10
-           + "<dt>Population: " + population + "</dl>"
+           + "<dt>Population: " + feature.population + "</dl>"
        
         layer.bindPopup(output)
         // layer.bindPopup('Population: '+ population)
@@ -235,6 +236,10 @@
     }
 
     function onEachFeature(feature, layer) {
+
+
+        feature.population = dict[feature.properties.name10]
+
          layer.on({
             mouseover: highlightFeature,
             mouseout: resetHighlight,
