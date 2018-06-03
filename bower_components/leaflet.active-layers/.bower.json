@@ -1,0 +1,33 @@
+{
+  "name": "leaflet.active-layers",
+  "version": "0.3.0",
+  "homepage": "https://github.com/vogdb/Leaflet.ActiveLayers",
+  "authors": [
+    "vogdb"
+  ],
+  "description": "Leaflet - get currently active layers on the map.",
+  "main": "./dist/leaflet.active-layers.min.js",
+  "keywords": [
+    "leaflet",
+    "mapbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.0",
+    "commit": "ee3b5b1829dbf1beb8a5b408877fe4644221b1e9"
+  },
+  "_source": "https://github.com/vogdb/Leaflet.ActiveLayers.git",
+  "_target": "^0.3.0",
+  "_originalSource": "leaflet.activelayers",
+  "_direct": true
+}
