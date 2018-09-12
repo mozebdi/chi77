@@ -1,26 +1,23 @@
 <template>
   <div>
-    <leaflet-map center="[41.881832, -87.623177]" id="map">
+    <leaflet-map id="map">
 
     </leaflet-map>
   </div>
 </template>
 <script>
-import LeafletMap from './components/LeafletMap.vue';
+import LeafletMap from "./components/LeafletMap.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    LeafletMap,
-
+    LeafletMap
   },
-  mounted() {
-
-  },
+  mounted() {}
 };
 </script>
 <style>
-@import '~leaflet/dist/leaflet.css';
+@import "~leaflet/dist/leaflet.css";
 #map {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
