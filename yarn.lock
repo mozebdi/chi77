@@ -5668,7 +5668,11 @@ leaflet-fullscreen@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/leaflet-fullscreen/-/leaflet-fullscreen-1.0.2.tgz#09c61c4bac45f63b2ee126afd87e5cd97650fc1b"
 
-leaflet@^1.0.2, leaflet@^1.1.0, leaflet@^1.2.0, leaflet@^1.3.1:
+leaflet-providers@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/leaflet-providers/-/leaflet-providers-1.4.0.tgz#e87c5e38e747ac1e63acc96ac915175c23c7d04b"
+
+leaflet@^1.0.2, leaflet@^1.1.0, leaflet@^1.2.0, leaflet@^1.3.1, leaflet@^1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.3.4.tgz#7f006ea5832603b53d7269ef5c595fd773060a40"
 
